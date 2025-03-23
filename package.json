@@ -5,16 +5,14 @@
   "type": "module",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js"
+    }
+  },
   "files": [
     "lib"
   ],
-  "exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "types": "./lib/index.d.ts"
-    }
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -43,5 +41,11 @@
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
     "vite-plugin-dts": "^4.5.3"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.8",
+    "@mui/material": "^6.4.8"
   }
 }
