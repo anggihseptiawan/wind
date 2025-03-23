@@ -1,1 +1,1 @@
-export { Alert } from "./components/alert/alert"
+export { Alert, type AlertProps } from "./components/alert"
